@@ -29,7 +29,7 @@ prompt: while 1 == 1 {
     
     // Test #2: Is the input the correct length
     if givenInput.count < 1 || givenInput.count > 30 {
-        print("Input is too long or too short")
+        print("NO")
         // If we got here, input is too short or it's too long
         continue // prompt again
         
@@ -39,14 +39,14 @@ prompt: while 1 == 1 {
     checking: for individualCharacter in givenInput {
         
         // DEBUG: Print the character we are looking at
-        print(individualCharacter)
+        // print(individualCharacter)
         
         // Check the character
         switch individualCharacter {
-        case "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z":
+        case "H", "I","N", "O", "S", "X", "Z":
             continue checking   // OK, go to next character in the string
         default:
-            print("Invalid character(s)")
+            print("NO")
             continue prompt     // Stop looking, we've found bad input
         }
         
@@ -55,11 +55,10 @@ prompt: while 1 == 1 {
     // If we got to this point, we know the input is good
     validInput = givenInput
     break   // quit the while loop and begin PROCESS section
-
 }
 
 // PROCESS
-print(validInput)
+print("YES")
 
 
 
