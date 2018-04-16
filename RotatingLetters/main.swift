@@ -31,7 +31,7 @@ prompt: while 1 == 1 {
     if givenInput.count < 1 || givenInput.count > 30 {
         print("NO")
         // If we got here, input is too short or it's too long
-        continue // prompt again
+        exit(0)
         
     }
     
@@ -47,7 +47,7 @@ prompt: while 1 == 1 {
             continue checking   // OK, go to next character in the string
         default:
             print("NO")
-            continue prompt     // Stop looking, we've found bad input
+            exit(0)    // Stop looking, we've found bad input
         }
         
     }
@@ -55,7 +55,7 @@ prompt: while 1 == 1 {
     // If we got to this point, we know the input is good
     validInput = givenInput
     print("YES")
-    continue
+    exit(0)
 }
 
 
