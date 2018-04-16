@@ -54,25 +54,10 @@ prompt: while 1 == 1 {
     
     // If we got to this point, we know the input is good
     validInput = givenInput
-    break   // quit the while loop and begin PROCESS section
+    print("YES")
+    continue
 }
 
-// PROCESS
-print("YES")
 
 
-
-
-
-
-
-
-
-
-// Get the user input
-var rawInput = readLine()
-
-// Print out the input provided
-print("You said:")
-print(rawInput)
 
